@@ -12,8 +12,10 @@
 	function scrollToBottom() {
 	  setTimeout(function () {
 		scrollToDiv.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+		
 	  }, 100)
 	}
+	scrollToBottom()
   
 	const handleSubmit = async () => {
 	  loading = true
