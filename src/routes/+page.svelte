@@ -1,4 +1,5 @@
 <script lang="ts">
+	
 	import ChatMessage from '$lib/components/ChatMessage.svelte'
 	import type { ChatCompletionRequestMessage } from 'openai'
 	import { SSE } from 'sse.js'
@@ -15,7 +16,6 @@
 		
 	  }, 100)
 	}
-	scrollToBottom()
   
 	const handleSubmit = async () => {
 	  loading = true
@@ -33,7 +33,6 @@
 	  eventSource.addEventListener('error', handleError)
   
 	  eventSource.addEventListener('message', (e) => {
-		scrollToBottom()
 		try {
 		  loading = false
 		  if (e.data === '[DONE]') {

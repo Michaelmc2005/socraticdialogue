@@ -7,7 +7,7 @@ html,
 body {
 	@apply h-full;
 	background: #0D2032;
-	overflow: hidden;
+	overflow: auto;
 }
  /* Base styles */
 /* Base styles */
@@ -17,6 +17,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	padding-top: 2rem;
+
   }
   
   .header {
@@ -36,8 +37,6 @@ body {
 	border-radius: 0.5rem;
 	padding: 1rem;
 	margin-top: 2rem;
-	overflow-y: auto;
-
   }
   
   .messages {
@@ -47,13 +46,7 @@ body {
 	justify-content: flex-end;
 	height: 100%;
   }
-  
-  
-  .scroll-to {
-	height: 0;
-	width: 0;
-  }
-  
+
   .form {
 	width: 100%;
 	margin-top: 2rem;
@@ -83,8 +76,23 @@ body {
   /* Media queries */
   
   @media (max-width: 640px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 1rem;
+	  }
+	  
 	.chat {
-	  max-height: 50vh;
+	  width: 75%;
+	  height: 70vh;
 	}
+	.messages {
+		display: flex;
+		flex-direction: column;
+		width: 250%;
+		justify-content: flex-end;
+		height: 30%;
+	  }
   }
   
