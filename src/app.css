@@ -7,7 +7,7 @@ html,
 body {
 	@apply h-full;
 	background: #0D2032;
-	overflow: auto;
+	overflow-y: hidden;
 }
  /* Base styles */
 /* Base styles */
@@ -33,10 +33,11 @@ body {
   
   .chat {
 	width: 100%;
-	background-color: rgb(50, 67, 90);
+	background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 	border-radius: 0.5rem;
 	padding: 1rem;
 	margin-top: 2rem;
+	overflow-y: auto;
   }
   
   .messages {
@@ -45,6 +46,7 @@ body {
 	width: 200%;
 	justify-content: flex-end;
 	height: 100%;
+
   }
 
   .form {
@@ -84,15 +86,15 @@ body {
 	  }
 	  
 	.chat {
-	  width: 75%;
-	  height: 70vh;
+	  width: auto;
+	  height: auto;
 	}
 	.messages {
 		display: flex;
 		flex-direction: column;
-		width: 250%;
+		width: 100%;
 		justify-content: flex-end;
-		height: 30%;
+		height: 20%;
 	  }
   }
   

@@ -26,22 +26,25 @@
 	.chat-bubble-primary {
 	  background-color: #CECECF ;
 	  color: #333;
-	  
+	  font-size: 1rem;
 	}
   
 	.chat-bubble-primary-light {
 	  background-color: #2196f3;
 	  color: #fff;
+	  font-size: 1rem;
 	}
   
 	.chat-bubble-secondary {
 	  background-color: #2787DD ;
 	  color: #fff;
+	  font-size: 1rem;
 	}
   
 	.chat-bubble-secondary-light {
 	  background-color: #fff;
 	  color: #333;
+	  font-size: 1rem;
 	}
   
 	/* Customize the chat header colors */
@@ -51,6 +54,36 @@
   
 	.chat-header-secondary {
 	  color: #333;
+	}
+	@media (max-width: 640px) {
+
+	.chat-bubble-primary {
+	  background-color: #CECECF ;
+	  color: #333;
+	  font-size: 0.75rem;
+	  width: auto;
+	}
+  
+	.chat-bubble-primary-light {
+	  background-color: #2196f3;
+	  color: #fff;
+	  font-size: 0.75rem;
+	  width: auto;
+	}
+  
+	.chat-bubble-secondary {
+	  background-color: #2787DD ;
+	  color: #fff;
+	  font-size: 0.75rem;
+	  width: auto;
+	}
+  
+	.chat-bubble-secondary-light {
+	  background-color: #fff;
+	  color: #333;
+	  font-size: 0.75rem;
+	  width: auto;
+	}
 	}
   </style>
   
