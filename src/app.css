@@ -89,8 +89,7 @@ body {
 	  width: auto;
 	  height: auto;
 	}
-	/*
-	*/
+
 	.messages {
 		display: flex;
 		flex-direction: column;
