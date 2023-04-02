@@ -1,3 +1,4 @@
+
 <script lang="ts">
 	import ChatMessage from '$lib/components/ChatMessage.svelte'
 	import type { ChatCompletionRequestMessage } from 'openai'
