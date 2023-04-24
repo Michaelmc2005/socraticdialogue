@@ -22,7 +22,6 @@
   </div>
   
   <style>
-	/* Customize the chat bubble colors */
 	.chat-bubble-primary {
 	  background-color: #CECECF ;
 	  color: #333;
@@ -30,13 +29,13 @@
 	}
   
 	.chat-bubble-primary-light {
-	  background-color: #2196f3;
+	  background-color: #008080;
 	  color: #fff;
 	  font-size: 1rem;
 	}
   
 	.chat-bubble-secondary {
-	  background-color: #2787DD ;
+	  background-color: #008080 ;
 	  color: #fff;
 	  font-size: 1rem;
 	}
@@ -65,14 +64,14 @@
 	}
   
 	.chat-bubble-primary-light {
-	  background-color: #2196f3;
+	  background-color: #008080;
 	  color: #fff;
 	  font-size: 0.75rem;
 	  width: auto;
 	}
   
 	.chat-bubble-secondary {
-	  background-color: #2787DD ;
+	  background-color: #008080 ;
 	  color: #fff;
 	  font-size: 0.75rem;
 	  width: auto;

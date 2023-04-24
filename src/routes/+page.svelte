@@ -58,7 +58,7 @@
 		<h1 class= "text-2xl font-bold w-full items-center"style="color: white;">SOCRATIQUE - Dialogue </h1>
 
 	</div>
-	<div class="h-[450px] max-h-full w-full bg-gray-800 rounded-md p-4 overflow-y-auto flex flex-col gap-4">
+	<div class="h-[450px] max-h-full w-full bg-gray-800 rounded-md p-4 overflow-y-auto flex flex-col gap-4" style="background-color: #2c2c2c;">
 		<div class="flex flex-col gap-2">
 			<ChatMessage type="assistant" message="What subject would you like to learn about?" />
 			{#each chatMessages as message}
@@ -74,7 +74,7 @@
 		<div class="" bind:this={scrollToDiv} />
 	</div>
 	<form
-		class="flex w-full rounded-md gap-4 bg-gray-700 p-4"
+		class="flex w-full rounded-md gap-4 bg-gray-700 p-4" style="background-color: #2c2c2c;"
 		on:submit|preventDefault={() => handleSubmit()}
 	>
 		<input type="text" class="input input-bordered w-full" bind:value={query} />
