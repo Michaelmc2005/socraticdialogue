@@ -3,6 +3,11 @@
 	import ChatMessage from '$lib/components/ChatMessage.svelte'
 	import type { ChatCompletionRequestMessage } from 'openai'
 	import { SSE } from 'sse.js'
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+ 
+	inject({ mode: dev ? 'development' : 'production' });
+
 	let query: string = ''
 	let answer: string = ''
 	let loading: boolean = false
@@ -52,7 +57,7 @@
 	  console.error(err)
 	}
   </script>
-
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
 <div class="flex flex-col pt-4 w-full px-8 items-center gap-2">
 	<div>
 		<h1 class= "text-2xl font-bold w-full items-center"style="color: white;">SOCRATIQUE - Dialogue </h1>
