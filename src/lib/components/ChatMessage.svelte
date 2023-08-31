@@ -23,19 +23,19 @@
   
   <style>
 	.chat-bubble-primary {
-	  background-color: #CECECF ;
+	  background-color: #7e7e7e ;
 	  color: #333;
 	  font-size: 1rem;
 	}
   
 	.chat-bubble-primary-light {
-	  background-color: #008080;
+	  background-color: #0f1c1c;
 	  color: #fff;
 	  font-size: 1rem;
 	}
   
 	.chat-bubble-secondary {
-	  background-color: #008080 ;
+	  background-color: #152121 ;
 	  color: #fff;
 	  font-size: 1rem;
 	}

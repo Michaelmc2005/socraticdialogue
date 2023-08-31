@@ -52,12 +52,26 @@
 	  console.error(err)
 	}
   </script>
+  <style>
+    .upload-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+		background-color: #2c2c2c;
+		color: white;
+    }
+
+    .file-input {
+
+		background-color: #333;
+    }
+</style>
 <div class="flex flex-col pt-4 w-full px-8 items-center gap-2">
 	<div>
 		<h1 class= "text-2xl font-bold w-full items-center"style="color: white;">SOCRATIQUE - Dialogue </h1>
 
 	</div>
-	<div class="h-[450px] max-h-full w-full bg-gray-800 rounded-md p-4 overflow-y-auto flex flex-col gap-4" style="background-color: #2c2c2c;">
+	<div class="h-[450px] max-h-full w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4" style="background-color: #2c2c2c;">
 		<div class="flex flex-col gap-2">
 			<ChatMessage type="assistant" message="What subject would you like to learn about?" />
 			{#each chatMessages as message}
@@ -73,9 +87,16 @@
 		<div class="" bind:this={scrollToDiv} />
 	</div>
 	<form
-		class="flex w-full rounded-md gap-4 bg-gray-700 p-4" style="background-color: #2c2c2c;"
+		class="flex w-full rounded-md gap-4 bg-gray-900 p-4" style="background-color: #2c2c2c;"
 		on:submit|preventDefault={() => handleSubmit()}
-	>
+	>   
+
+		<div class="upload-container">
+			<input type="file" id="docUpload" accept=".pdf" class="file-input" />
+
+	 
+		</div>
+
 		<input type="text" class="input input-bordered w-full" bind:value={query} />
 		<button type="submit" class="btn btn-accent"> Send </button>
 	</form>
