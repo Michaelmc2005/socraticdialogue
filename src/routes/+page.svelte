@@ -52,20 +52,7 @@
 	  console.error(err)
 	}
   </script>
-  <style>
-    .upload-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-		background-color: #2c2c2c;
-		color: white;
-    }
 
-    .file-input {
-
-		background-color: #333;
-    }
-</style>
 <div class="flex flex-col pt-4 w-full px-8 items-center gap-2">
 	<div>
 		<h1 class= "text-2xl font-bold w-full items-center"style="color: white;">SOCRATIQUE - Dialogue </h1>
@@ -90,12 +77,6 @@
 		class="flex w-full rounded-md gap-4 bg-gray-900 p-4" style="background-color: #2c2c2c;"
 		on:submit|preventDefault={() => handleSubmit()}
 	>   
-
-		<div class="upload-container">
-			<input type="file" id="docUpload" accept=".pdf" class="file-input" />
-
-	 
-		</div>
 
 		<input type="text" class="input input-bordered w-full" bind:value={query} />
 		<button type="submit" class="btn btn-accent"> Send </button>
