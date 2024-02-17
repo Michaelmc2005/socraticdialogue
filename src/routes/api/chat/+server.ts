@@ -9,15 +9,15 @@ export const config: Config = {
 	runtime: 'edge'
 }
 
-
+export const GET: RequestHandler = async () => {
+	return json({ error: 'This is the Socratique Dialogue API - GET Method not allowed, only POST' }, { status: 405 })
+}
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		if (!OPENAI_KEY) {
 			throw new Error('OPENAI_KEY env variable not set')
 		}
-
 		const requestData = await request.json()
-
 		if (!requestData) {
 			throw new Error('No request data')
 		}
