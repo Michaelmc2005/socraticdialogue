@@ -4,9 +4,8 @@ import type { RequestHandler } from './$types'
 import { getTokens } from '$lib/tokenizer'
 import { json } from '@sveltejs/kit'
 import type { Config } from '@sveltejs/adapter-vercel'
-import OpenAI from 'openai'
-const openai = new OpenAI()
-openai
+import openai from 'openai'
+
 export const config: Config = {
 	runtime: 'edge'
 }
@@ -80,24 +79,23 @@ export const POST: RequestHandler = async ({ request }) => {
 			temperature: 0.9,
 			stream: true
 		}
-		
-		// const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-		// 	headers: {
-		// 		Authorization: `Bearer ${OPENAI_KEY}`,
-		// 		'Content-Type': 'application/json'
-		// 	},
-		// 	method: 'POST',
-		// 	body: JSON.stringify(chatRequestOpts)
-		// })
-
 		const thread = await openai.beta.threads.create();
 		const run = await openai.beta.threads.run.create(
 			thread.id,
 			{
 				asssistant_id: "asst_1Zw3fzjkCkwOPknF9p9pxV7W",
-				instructions: "you are socratique"
+				instructions: "please address me as lord vader in every message"
 			}
 		)
+		const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+			headers: {
+				Authorization: `Bearer ${OPENAI_KEY}`,
+				'Content-Type': 'application/json'
+			},
+			method: 'POST',
+			body: JSON.stringify(chatRequestOpts)
+		})
+
 		if (!chatResponse.ok) {
 			const err = await chatResponse.json()
 			throw new Error(err)
