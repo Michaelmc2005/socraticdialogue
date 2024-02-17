@@ -34,7 +34,7 @@
 	}
 
 	.chat-bubble-secondary {
-		background-color: #152121 ;
+		background-color: #1f1e1e ;
 		color: #fff;
 		font-size: 1rem;
 	}
