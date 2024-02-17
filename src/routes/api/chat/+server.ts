@@ -12,6 +12,12 @@ export const config: Config = {
 export const GET: RequestHandler = async () => {
 	return json({ error: 'This is the Socratique Dialogue API - GET Method not allowed, only POST' }, { status: 405 })
 }
+export const PUT: RequestHandler = async () => {
+	return json({ error: 'This is the Socratique Dialogue API - PUT Method not allowed, only POST' }, { status: 405 })
+}
+export const DELETE: RequestHandler = async () => {
+	return json({ error: 'This is the Socratique Dialogue API - DELETE Method not allowed, only POST' }, { status: 405 })
+}
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		if (!OPENAI_KEY) {
