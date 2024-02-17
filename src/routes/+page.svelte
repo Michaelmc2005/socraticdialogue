@@ -82,3 +82,47 @@
 		<button type="submit" class="btn btn-accent"> Send </button>
 	</form>
 </div>
+
+<style >
+	.chat-bubble{
+		padding: 10px;
+		border-radius: 10px;
+		margin: 5px;
+	}
+	.chat-bubble-primary {
+		background-color: #7e7e7e ;
+		color: #333;
+		font-size: 1rem;
+	}
+
+	.chat-bubble-secondary {
+		background-color: #152121 ;
+		color: #fff;
+		font-size: 1rem;
+	}
+
+	/* Customize the chat header colors */
+	.chat-header-primary {
+		color: #fff;
+	}
+
+	.chat-header-secondary {
+		color: #333;
+	}
+
+	@media (max-width: 640px) {
+		.chat-bubble-primary {
+			background-color: #CECECF ;
+			color: #333;
+			font-size: 0.75rem;
+			width: auto;
+		}
+
+		.chat-bubble-secondary {
+			background-color: #008080 ;
+			color: #fff;
+			font-size: 0.75rem;
+			width: auto;
+		}
+	}
+</style>
