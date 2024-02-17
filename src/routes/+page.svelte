@@ -58,7 +58,7 @@
 		<h1 class= "text-2xl font-bold w-full items-center"style="color: white;">SOCRATIQUE - Dialogue </h1>
 
 	</div>
-	<div class="h-[450px] max-h-full w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4" style="background-color: #2c2c2c;">
+	<div class="h-[650px] max-h-full w-full bg-gray-900 rounded-md p-4 overflow-y-auto flex flex-col gap-4" style="background-color: #2c2c2c;">
 		<div class="flex flex-col gap-2">
 			<ChatMessage type="assistant" message="What subject would you like to learn about?" />
 			{#each chatMessages as message}
