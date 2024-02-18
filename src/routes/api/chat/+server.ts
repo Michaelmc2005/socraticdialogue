@@ -4,7 +4,6 @@ import type { RequestHandler } from './$types'
 import { getTokens } from '$lib/tokenizer'
 import { json } from '@sveltejs/kit'
 import type { Config } from '@sveltejs/adapter-vercel'
-import openai from 'openai'
 
 export const config: Config = {
 	runtime: 'edge'
@@ -15,9 +14,6 @@ export const GET: RequestHandler = async () => {
 }
 export const PUT: RequestHandler = async () => {
 	return json({ error: 'This is the Socratique Dialogue API - PUT Method not allowed, only POST' }, { status: 405 })
-}
-export const DELETE: RequestHandler = async () => {
-	return json({ error: 'This is the Socratique Dialogue API - DELETE Method not allowed, only POST' }, { status: 405 })
 }
 export const POST: RequestHandler = async ({ request }) => {
 	try {
@@ -79,14 +75,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			temperature: 0.9,
 			stream: true
 		}
-		const thread = await openai.beta.threads.create();
-		const run = await openai.beta.threads.run.create(
-			thread.id,
-			{
-				asssistant_id: "asst_1Zw3fzjkCkwOPknF9p9pxV7W",
-				instructions: "please address me as lord vader in every message"
-			}
-		)
+
 		const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
 			headers: {
 				Authorization: `Bearer ${OPENAI_KEY}`,
