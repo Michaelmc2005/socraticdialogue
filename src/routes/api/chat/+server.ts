@@ -9,6 +9,8 @@ export const config: Config = {
 	runtime: 'edge'
 }
 
+
+
 export const GET: RequestHandler = async () => {
 	return json({ error: 'This is the Socratique Dialogue API - GET Method not allowed, only POST' }, { status: 405 })
 }
